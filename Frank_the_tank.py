@@ -338,7 +338,6 @@ def main():
                     stopAll()
 
 def quit():
-    
     """shuts down all running components of program"""
 
     try:
