@@ -16,7 +16,7 @@ import os
 import sys
 from pygame.locals import *
 
-IP_ADDRESS = "192.168.0.5" # ip address of host used for video stream
+IP_ADDRESS = "192.168.0.2" # ip address of host used for video stream
 RASPICAM_ON = "raspivid -t 999999 -w 1280 -h 720 -sa -50 -br 60 -co 20 -fps 24 -b 3000000 -o - | gst-launch-1.0 -e -vvv fdsrc ! h264parse ! rtph264pay pt=96 config-interval=5 ! udpsink host=" + IP_ADDRESS + " port=8160&"
 RASPICAM_OFF = "sudo killall -9 gst-launch-1.0"
 PHOTOS_DIR = "/home/pi/Desktop/Tank_photos" # save photos to a any directory
